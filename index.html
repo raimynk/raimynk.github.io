@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mayank Kumar Rai – AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EBEFE5;--surface:#F6F8F2;--ink:#14281F;--muted:#4C5E54;--line:#C5CFC0;--red:#B5412E;--amber:#C99512;--green:#2F7D46;
+--head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:"Newsreader",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#101A15;--surface:#17251D;--ink:#E6EEE2;--muted:#9DB0A3;--line:#2B3F33;--red:#E0745F;--amber:#E3B53B;--green:#58B574}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#101A15;--surface:#17251D;--ink:#E6EEE2;--muted:#9DB0A3;--line:#2B3F33;--red:#E0745F;--amber:#E3B53B;--green:#58B574}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;gap:1.25rem;flex-wrap:wrap;padding:1.25rem 0;font:700 .95rem var(--head)}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+h1{font:800 clamp(3rem,11vw,7.5rem)/.92 var(--head);letter-spacing:-.04em;margin:2rem 0 1.25rem}
+h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.05 var(--head);letter-spacing:-.025em;margin:0 0 1.5rem}
+h3{font:700 1.25rem/1.25 var(--head);margin:0 0 .4rem}
+.lede{max-width:40rem;font-size:1.35rem;color:var(--muted);margin:0 0 1.5rem}
+.lede b{color:var(--ink);font-weight:500}
+.links{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn{font:700 .95rem var(--head);padding:.7rem 1.1rem;border:2px solid var(--ink);border-radius:4px;text-decoration:none}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--green);border-color:var(--green);color:#fff}
+/* NDVI instrument */
+.ndvi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.25rem}
+.ndvi h3{margin-bottom:.25rem}.ndvi p{margin:0 0 1rem;color:var(--muted);font-size:1rem}
+.ramp{height:2.4rem;border-radius:3px;background:linear-gradient(90deg,var(--red) 0%,var(--amber) 45%,var(--green) 100%);position:relative}
+.pin{position:absolute;top:-6px;bottom:-6px;width:4px;background:var(--ink);border-radius:2px;transition:left .15s}
+.ticks{display:flex;justify-content:space-between;font:700 .8rem var(--head);color:var(--muted);margin:.35rem 0 1rem}
+.ctl{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem}
+.ctl label{font:700 .9rem var(--head);display:block}
+.ctl input{width:100%;accent-color:var(--green)}
+.read{grid-column:1/-1;font:700 1.1rem var(--head)}
+.read span{color:var(--green)}
+section{padding:4rem 0;border-top:1px solid var(--line)}
+.proj{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:48rem){.proj{grid-template-columns:1fr 1fr}.ctl{grid-template-columns:1fr 1fr 1.2fr}.read{grid-column:auto}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.5rem}
+.card ul{padding-left:1.1rem;margin:.75rem 0 1rem}.card li{margin-bottom:.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.tags li{font:700 .8rem var(--head);padding:.25rem .6rem;border-radius:99px;border:1.5px solid var(--green);color:var(--ink);background:transparent;margin:0}
+.tags li.have{background:var(--green);color:#fff}
+.skills{display:grid;gap:1.75rem 2rem;grid-template-columns:1fr}
+@media(min-width:48rem){.skills{grid-template-columns:1fr 1fr}}
+.skills h3{font-size:1.05rem}
+.key{display:flex;gap:1.25rem;flex-wrap:wrap;font:700 .85rem var(--head);color:var(--muted);margin:-.75rem 0 1.75rem}
+.key i{display:inline-block;width:.9rem;height:.9rem;border-radius:99px;border:1.5px solid var(--green);vertical-align:-2px;margin-right:.4rem}
+.key i.f{background:var(--green)}
+.edu{display:grid;gap:1rem}
+.row{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.row b{font:700 1rem var(--head)}
+.row p{margin:0}.row small{color:var(--muted);font-size:1rem}
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--muted)}
+footer a{color:var(--ink)}
+@media(max-width:34rem){.row{grid-template-columns:1fr;gap:.25rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pin{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#beyond">Beyond code</a><a href="#contact">Contact</a></nav>
+
+<header>
+<h1>Mayank Kumar Rai</h1>
+<p class="lede">I’m an engineering student in Bengaluru building <b>AI systems that see</b>, from classifying tree species in drone imagery to serving machine-learning models through APIs.</p>
+<div class="links">
+<a class="btn p" href="mailto:raimayank2421@gmail.com">Email me</a>
+<a class="btn" href="https://github.com/raimynk">GitHub</a>
+<a class="btn" href="https://linkedin.com/in/raimynk">LinkedIn</a>
+</div>
+
+<div class="ndvi">
+<h3>Try the index my forest project uses</h3>
+<p>NDVI compares near-infrared and red light reflected by leaves. Move the sliders to see how healthy vegetation scores.</p>
+<div class="ramp" aria-hidden="true"><div class="pin" id="pin"></div></div>
+<div class="ticks" aria-hidden="true"><span>−1 bare or water</span><span>0.3 sparse</span><span>1 dense canopy</span></div>
+<div class="ctl">
+<label>Near-infrared <input type="range" id="nir" min="0" max="100" value="60"></label>
+<label>Red <input type="range" id="red" min="0" max="100" value="20"></label>
+<div class="read" aria-live="polite">NDVI <span id="val">0.50</span>, <span id="lbl">healthy vegetation</span></div>
+</div>
+</div>
+</header>
+</div>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<div class="proj">
+<article class="card">
+<h3>Tree species identification from UAV multispectral images</h3>
+<ul>
+<li>Built a pipeline that classifies tree species and maps forests from drone imagery.</li>
+<li>Computed NDVI, NDRE and GNDVI, then used Mean Shift segmentation to isolate individual trees.</li>
+<li>Explored a Multi-Head ResNet18 and hierarchical classification to separate species.</li>
+</ul>
+<ul class="tags"><li class="have">Python</li><li class="have">Deep learning</li><li class="have">Computer vision</li></ul>
+</article>
+<article class="card">
+<h3>Student mental-health score prediction system</h3>
+<ul>
+<li>Trained a model that predicts a mental-health score from academic, lifestyle and social-media habits.</li>
+<li>Cleaned data and engineered features with Pandas, then saved the model with Joblib.</li>
+<li>Served predictions through a FastAPI REST API with Pydantic validation and a web interface.</li>
+</ul>
+<ul class="tags"><li class="have">Scikit-learn</li><li class="have">FastAPI</li><li class="have">JavaScript</li></ul>
+</article>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>AI engineering skills</h2>
+<div class="key"><span><i class="f"></i>Used in my projects</span><span><i></i>Building toward</span></div>
+<div class="skills">
+<div><h3>Machine learning</h3><ul class="tags"><li class="have">Scikit-learn</li><li class="have">Feature engineering</li><li class="have">Data preprocessing</li><li>Model evaluation</li><li>Hyperparameter tuning</li><li>XGBoost</li></ul></div>
+<div><h3>Deep learning</h3><ul class="tags"><li class="have">CNNs (ResNet18)</li><li class="have">Deep learning</li><li>PyTorch</li><li>TensorFlow and Keras</li><li>Transfer learning</li><li>Transformers</li></ul></div>
+<div><h3>Computer vision</h3><ul class="tags"><li class="have">Image segmentation</li><li class="have">Multispectral imaging</li><li class="have">Image preprocessing</li><li>OpenCV</li><li>Object detection (YOLO)</li></ul></div>
+<div><h3>Generative AI</h3><ul class="tags"><li>LLM APIs</li><li>Prompt engineering</li><li>RAG pipelines</li><li>Vector databases</li><li>LangChain</li><li>Hugging Face</li></ul></div>
+<div><h3>MLOps and deployment</h3><ul class="tags"><li class="have">FastAPI</li><li class="have">REST APIs</li><li class="have">Pydantic</li><li class="have">Joblib</li><li class="have">Git and GitHub</li><li>Docker</li><li>MLflow</li><li>CI/CD</li></ul></div>
+<div><h3>Foundations</h3><ul class="tags"><li class="have">Python</li><li class="have">Java</li><li class="have">JavaScript</li><li class="have">Pandas and NumPy</li><li class="have">Data structures and algorithms</li><li class="have">DBMS</li><li>SQL</li><li>Linear algebra and statistics</li></ul></div>
+<div><h3>Electronics background</h3><ul class="tags"><li class="have">Signal processing</li><li class="have">Embedded systems</li><li class="have">Microcontrollers</li><li class="have">Digital electronics</li><li class="have">Communication systems</li><li>Edge AI (TinyML)</li></ul></div>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education</h2>
+<div class="edu">
+<div class="row"><b>2023–2027</b><p>B.E. Electronics and Communication Engineering<br><small>Nitte Meenakshi Institute of Technology, Bengaluru · CGPA 7.04</small></p></div>
+<div class="row"><b>2022</b><p>Class XII, 81.6%<br><small>Sarvodaya Public School, Azamgarh</small></p></div>
+<div class="row"><b>2020</b><p>Class X, 88.4%<br><small>Sarvodaya Public School, Azamgarh</small></p></div>
+</div>
+</div></section>
+
+<section id="beyond"><div class="wrap">
+<h2>Beyond code</h2>
+<div class="proj">
+<article class="card"><h3>Creative Head, X-Factor Club</h3><p>I lead creative planning, branding, promotion and student engagement for institute-level cultural events at NMIT.</p></article>
+<article class="card"><h3>Stage and spoken word</h3><p>1st prize in Poetry Slam at Anadyanta 2024. 2nd prize in Street Play at BITS Pilani, Goa Campus. I also performed drug-awareness street plays with the Narcotics Control Bureau in Bengaluru.</p></article>
+</div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+<h2>Let’s build something</h2>
+<p>I’m open to AI and ML internships and projects. Write to <a href="mailto:raimayank2421@gmail.com">raimayank2421@gmail.com</a> or call +91 9118204133.</p>
+</div></footer>
+
+<script>
+(function(){
+var n=document.getElementById('nir'),r=document.getElementById('red'),v=document.getElementById('val'),l=document.getElementById('lbl'),p=document.getElementById('pin');
+function u(){
+var a=+n.value,b=+r.value,d=a+b,x=d===0?0:(a-b)/d;
+v.textContent=x.toFixed(2);
+p.style.left='calc('+((x+1)/2*100)+'% - 2px)';
+l.textContent=x<0?'water or bare surface':x<0.2?'bare soil or rock':x<0.4?'sparse vegetation':x<0.6?'healthy vegetation':'dense, vigorous canopy';
+}
+n.addEventListener('input',u);r.addEventListener('input',u);u();
+})();
+</script>
+</body>
+</html>
